@@ -39,6 +39,7 @@ app.get('/stream/:filename', (req, res) => {
     const youtubeUrl = `rtmp://a.rtmp.youtube.com/live2/${streamKey}`;
 
     const ffmpeg = spawn('ffmpeg', [
+        '-stream_loop', '-1', // Loop indefinitely
         '-re', '-i', filepath,   // Input video file
         '-c:v', 'libx264', '-preset', 'ultrafast', '-tune', 'zerolatency',
         '-c:a', 'aac', '-b:a', '128k', '-ar', '44100',
