@@ -1,4 +1,4 @@
-# Use an official Node.js image
+\# Use Node.js official image
 FROM node:18
 
 # Install FFmpeg
@@ -14,7 +14,7 @@ RUN npm install
 # Copy the rest of the application files
 COPY . .
 
-# Expose the port the app runs on
+# Expose the port your app runs on
 EXPOSE 8080
 
 # Start the application
