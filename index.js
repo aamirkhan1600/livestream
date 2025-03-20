@@ -6,7 +6,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+//const PORT = 3000;
 
 // Set up storage for uploaded videos
 const storage = multer.diskStorage({
@@ -52,5 +52,9 @@ app.get('/stream/:filename', (req, res) => {
     res.json({ message: 'Streaming started', filename });
 });
 
-// Start the server
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 3000; // Use Railway's dynamic port or fallback to 3000
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+
