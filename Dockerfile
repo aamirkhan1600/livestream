@@ -1,4 +1,4 @@
-\# Use Node.js official image
+# Use Node.js official image
 FROM node:18
 
 # Install FFmpeg
