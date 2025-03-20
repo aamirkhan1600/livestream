@@ -1,0 +1,20 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Environment variables
+.env
+
+# FFmpeg-related files
+uploads/
+*.mp4
+*.flv
+
+# Logs
+logs/
+*.log
+
+# Railway specific
+railway.sh
